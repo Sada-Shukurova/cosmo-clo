@@ -9,7 +9,7 @@ import { BsBag } from "react-icons/bs";
 import Logo from "../img/logo.svg";
 
 // import Link
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   // header state
@@ -35,7 +35,39 @@ const Header = () => {
             <img className="w-[40px]" src={Logo} alt="logo" />
           </div>
         </Link>
-
+        {/* Navigation */}
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `${isActive ? "text-rose-800 underline font-semibold" : ""} text-xl`
+          }
+        >
+          HOME
+        </NavLink>
+        <NavLink
+          to="/products"
+          className={({ isActive }) =>
+            `${isActive ? "text-rose-800 underline font-semibold" : ""} text-xl`
+          }
+        >
+          PRODUCTS
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            `${isActive ? "text-rose-800 underline font-semibold" : ""} text-xl`
+          }
+        >
+          ABOUT
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            `${isActive ? "text-rose-800 underline font-semibold" : ""} text-xl`
+          }
+        >
+          CONTACT
+        </NavLink>
         {/* cart */}
         <div
           onClick={() => setIsOpen(!isOpen)}
