@@ -15,7 +15,7 @@ const Sidebar = () => {
   // sidebar context
   const { isOpen, handleClose } = useContext(SidebarContext);
   // cart context
-  const { cart, clearCart, total } = useContext(CartContext);
+  const { cart, clearCart, total, itemAmount } = useContext(CartContext);
   return (
     <div
       className={`${
@@ -23,7 +23,9 @@ const Sidebar = () => {
       } w-full bg-white fixed top-0 h-full shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px] `}
     >
       <div className="flex justify-between items-center py-6 border-b">
-        <div className="uppercase text-sm font-semibold">Shopping Bag (0)</div>
+        <div className="uppercase text-sm font-semibold">
+          Shopping Bag ({itemAmount})
+        </div>
         {/* icon */}
         <div
           onClick={handleClose}
