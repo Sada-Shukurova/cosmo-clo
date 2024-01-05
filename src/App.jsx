@@ -1,13 +1,11 @@
 // import react-router
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import pages
-import Home from "./pages/Home";
-import ProductDetails from "./pages/ProductDetails";
+
 // import components
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ProductsPage from "./pages/ProductsPage";
+import { myRoutes } from "./MyRoutes";
 
 const App = () => {
   return (
@@ -15,9 +13,9 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="product/:id" element={<ProductDetails />} />
-          <Route path="/products" element={<ProductsPage />} />
+          {myRoutes.map(({ id, path, element }) => (
+            <Route path={path} element={element} key={id} />
+          ))}
         </Routes>
         <Sidebar />
         <Footer />
