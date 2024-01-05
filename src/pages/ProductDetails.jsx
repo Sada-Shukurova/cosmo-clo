@@ -28,12 +28,21 @@ const ProductDetails = () => {
   // destructure product
   const { title, price, description, image } = product;
   return (
-    <section className="pt-32 pb-12 lg:py-32 h-screen">
+    <section className="pt-32 pb-12 lg:py-32 h-screen flex items-center">
       <div className="container mx-auto">
-        {/* image */}
-        <div>image</div>
-        {/* text */}
-        <div>text</div>
+        {/* image and text wrapper */}
+        <div className="flex flex-col lg:flex-row items-center">
+          {/* image */}
+          <div className="flex flex-1 justify-center items-center mb-8 lg:mb-0 ">
+            <img
+              className="max-w-[200px] lg:max-w-sm"
+              src={image}
+              alt={title}
+            />
+          </div>
+          {/* text */}
+          <div>text</div>
+        </div>
       </div>
     </section>
   );
