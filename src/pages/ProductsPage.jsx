@@ -5,7 +5,7 @@ import Products from "../components/Products";
 const ProductsPage = () => {
   return (
     <div>
-      <HeroSmall />
+      <HeroSmall heroTitle={"Products"} />
       <Products />
     </div>
   );
