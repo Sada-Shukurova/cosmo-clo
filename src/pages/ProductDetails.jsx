@@ -3,9 +3,9 @@ import { useContext } from "react";
 // import useparams
 import { useParams } from "react-router";
 // import cart contect
-import CartContext from "../contexts/CartContext";
+import { CartContext } from "../contexts/CartContext";
 // import product contect
-import ProductContext from "../contexts/ProductContext";
+import { ProductContext } from "../contexts/ProductContext";
 
 const ProductDetails = () => {
   // get the product id from url
@@ -17,8 +17,26 @@ const ProductDetails = () => {
   const product = products.find((item) => {
     return item.id === parseInt(id);
   });
-
-  return <div>Product Details Page</div>;
+  // if product is not found
+  if (!product) {
+    return (
+      <section className="h-screen flex justify-center items-center">
+        Loading...
+      </section>
+    );
+  }
+  // destructure product
+  const { title, price, description, image } = product;
+  return (
+    <section className="pt-32 pb-12 lg:py-32 h-screen">
+      <div className="container mx-auto">
+        {/* image */}
+        <div>image</div>
+        {/* text */}
+        <div>text</div>
+      </div>
+    </section>
+  );
 };
 
 export default ProductDetails;
