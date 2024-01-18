@@ -1,7 +1,7 @@
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import Home from "./pages/Home";
-import ProductDetails from "./pages/ProductDetails";
+// import ProductDetails from "./pages/ProductDetails";
 import ProductsPage from "./pages/ProductsPage";
 
 export const myRoutes = [
@@ -9,25 +9,30 @@ export const myRoutes = [
     id: 1,
     path: "/",
     element: <Home />,
+    text: "HOME",
   },
   {
     id: 2,
     path: "/products",
     element: <ProductsPage />,
+    text: "PRODUCTS",
   },
-  {
-    id: 3,
-    path: "/product/:id",
-    element: <ProductDetails />,
-  },
+  // {
+  //   id: 3,
+  //   path: "/product/:id",
+  //   element: <ProductDetails />,
+  //   text: "",
+  // },
   {
     id: 4,
     path: "/about",
     element: <AboutPage />,
+    text: "ABOUT",
   },
   {
     id: 5,
     path: "/contact",
     element: <ContactPage />,
+    text: "CONTACT",
   },
 ];
