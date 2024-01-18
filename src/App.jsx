@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { myRoutes } from "./MyRoutes";
+import ProductDetails from "./pages/ProductDetails";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           {myRoutes.map(({ id, path, element }) => (
             <Route path={path} element={element} key={id} />
           ))}
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
         <Sidebar />
         <Footer />
