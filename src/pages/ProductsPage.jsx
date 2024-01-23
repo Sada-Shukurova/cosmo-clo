@@ -1,15 +1,21 @@
 import HeroSmall from "../components/HeroSmall";
 import Products from "../components/Products";
-import FilterSortSearch from "../components/FilterSortSearch";
+import SortSearch from "../components/SortSearch";
 import Recommended from "../components/Recommended";
+import SideFilter from "../components/SideFilter/SideFilter";
 
 const ProductsPage = () => {
   return (
     <div>
       <HeroSmall heroTitle={"Products"} />
-      <Recommended />
-      <FilterSortSearch />
-      <Products />
+      <div className="flex ">
+        <SideFilter />
+        <div className="flex flex-col my-0 mx-auto">
+          <Recommended />
+          <SortSearch />
+          <Products />
+        </div>
+      </div>
     </div>
   );
 };
