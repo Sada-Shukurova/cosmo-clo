@@ -1,5 +1,3 @@
-// import images
-import WomanImg from "../img/woman_hero.png";
 // import Link
 import { Link } from "react-router-dom";
 
@@ -24,10 +22,6 @@ const Hero = () => {
           >
             Discover More
           </Link>
-        </div>
-        {/* image */}
-        <div className="hidden lg:block">
-          <img src={WomanImg} alt="woman" />
         </div>
       </div>
     </section>
