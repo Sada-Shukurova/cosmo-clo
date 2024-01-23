@@ -7,3 +7,8 @@
     @apply font-primary text-primary;
   }
 }
+@layer components {
+  .checkbox-label:has(input:checked) .checkmark {
+    @apply bg-[#f0a7b9] border border-[#e37891];
+  }
+}
