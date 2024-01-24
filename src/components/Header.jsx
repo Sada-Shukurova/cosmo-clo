@@ -7,7 +7,7 @@ import { CartContext } from "../contexts/CartContext";
 import { BsBag } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
 // import Logo
-import Logo from "../img/logo.svg";
+import Logo from "/img/logo.svg";
 
 // import Link
 import { Link, NavLink, useLocation } from "react-router-dom";
@@ -21,7 +21,7 @@ const Header = () => {
   const { itemAmount } = useContext(CartContext);
 
   // get products context
-  const { setPageI, pageI } = useContext(ProductContext);
+  const { pageI,setPageI  } = useContext(ProductContext);
 
   // get location
   const location = useLocation();
@@ -52,8 +52,9 @@ const Header = () => {
       <div className="container px-[2.5rem] mx-auto flex items-center justify-between h-full">
         {/* Logo */}
         <Link to={"/"}>
-          <div>
+          <div className="flex items-center">
             <img className="w-[40px]" src={Logo} alt="logo" />
+            <h2 className="text-2xl font-semibold">HappyClo</h2>
           </div>
         </Link>
         {/* Navigation */}
@@ -64,7 +65,7 @@ const Header = () => {
               to={path}
               className={({ isActive }) =>
                 `${
-                  isActive ? "text-red-700 underline font-semibold" : ""
+                  isActive ? "text-red-700 border-b-2 border-b-red-700  font-semibold" : ""
                 } text-xl`
               }
             >
