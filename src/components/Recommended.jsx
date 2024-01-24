@@ -1,7 +1,7 @@
 import Button from "./Button";
 
 const recommendedBtnClasses =
-  "bg-red-400 text-white font-semibold py-3 px-10 rounded-full";
+  "bg-red-400 text-white font-semibold py-3 px-10 rounded-full transition-all duration-500 border border-red-400  hover:bg-white hover:text-red-400";
 
 const Recommended = () => {
   return (
