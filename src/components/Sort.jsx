@@ -30,6 +30,9 @@ const Sort = () => {
         }}
       >
         <Select
+          MenuProps={{
+            disableScrollLock: true,
+          }}
           labelId="sort-label"
           id="simple-sort"
           value={sortItems}

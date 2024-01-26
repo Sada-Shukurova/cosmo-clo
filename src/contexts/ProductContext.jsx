@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 
-const url = "https://fakestoreapi.com/products";
-const hUrl = "https://fakestoreapi.com/products?limit=4";
+const url = "https://happy-clo-db.vercel.app/products";
+const hUrl = "https://happy-clo-db.vercel.app/products?_limit=4";
 // create context
 export const ProductContext = createContext();
 
