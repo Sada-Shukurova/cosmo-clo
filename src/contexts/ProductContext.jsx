@@ -1,5 +1,8 @@
 import { createContext, useState, useEffect } from "react";
 
+const filURL=`https://happy-clo-db.vercel.app/products?category=${categoryItem}&subcategory=${subcatItem}`
+
+
 const url = "https://happy-clo-db.vercel.app/products";
 const hUrl = "https://happy-clo-db.vercel.app/products?_limit=4";
 // create context
@@ -14,7 +17,7 @@ const ProductProvider = ({ children }) => {
   // fetch products
   useEffect(() => {
     const fetchProducts = async () => {
-      const fetchUrl = pageI ? url : hUrl;
+      let fetchUrl = pageI ? url : hUrl;
       console.log("Fetching from URL:", fetchUrl);
 
       try {

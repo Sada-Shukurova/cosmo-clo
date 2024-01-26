@@ -1,8 +1,8 @@
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import Home from "./pages/Home";
+import AboutPage from "../pages/AboutPage";
+import ContactPage from "../pages/ContactPage";
+import Home from "../pages/HomePage";
 // import ProductDetails from "./pages/ProductDetails";
-import ProductsPage from "./pages/ProductsPage";
+import ProductsPage from "../pages/ProductsPage";
 
 export const myRoutes = [
   {

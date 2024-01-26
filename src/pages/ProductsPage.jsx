@@ -1,7 +1,7 @@
-import HeroSmall from "../components/HeroSmall";
-import Products from "../components/Products";
-import SortSearch from "../components/SortSearch";
-import Recommended from "../components/Recommended";
+import HeroSmall from "../components/layout/HeroSmall";
+import Products from "../components/_common/Products";
+import SortSearch from "../components/sortSearch/SortSearch";
+import Recommended from "../components/_common/Recommended";
 import SideFilter from "../components/SideFilter/SideFilter";
 
 const ProductsPage = () => {

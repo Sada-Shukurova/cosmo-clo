@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 // sidebarcontext
-import { SidebarContext } from "../contexts/SidebarContext";
+import { SidebarContext } from "../../contexts/SidebarContext";
 // card barcontext
-import { CartContext } from "../contexts/CartContext";
+import { CartContext } from "../../contexts/CartContext";
 // import icons
 import { BsBag } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
@@ -11,8 +11,8 @@ import Logo from "/img/logo.svg";
 
 // import Link
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { myRoutes } from "../MyRoutes";
-import { ProductContext } from "../contexts/ProductContext";
+import { myRoutes } from "../../Routes/MyRoutes";
+import { ProductContext } from "../../contexts/ProductContext";
 
 const Header = () => {
   // header state
@@ -21,7 +21,7 @@ const Header = () => {
   const { itemAmount } = useContext(CartContext);
 
   // get products context
-  const { pageI,setPageI  } = useContext(ProductContext);
+  const { pageI, setPageI } = useContext(ProductContext);
 
   // get location
   const location = useLocation();
@@ -65,7 +65,9 @@ const Header = () => {
               to={path}
               className={({ isActive }) =>
                 `${
-                  isActive ? "text-red-700 border-b-2 border-b-red-700  font-semibold" : ""
+                  isActive
+                    ? "text-red-700 border-b-2 border-b-red-700  font-semibold"
+                    : ""
                 } text-xl`
               }
             >

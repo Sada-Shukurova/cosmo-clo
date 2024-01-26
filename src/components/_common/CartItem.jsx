@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import icons
 import { IoMdAdd, IoMdClose, IoMdRemove } from "react-icons/io";
 // import cart context
-import { CartContext } from "../contexts/CartContext";
+import { CartContext } from "../../contexts/CartContext";
 import { useContext } from "react";
 
 const CartItem = ({ item }) => {

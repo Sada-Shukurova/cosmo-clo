@@ -1,5 +1,4 @@
-import React from "react";
-import HeroSmall from "../components/HeroSmall";
+import HeroSmall from "../components/layout/HeroSmall";
 
 const AboutPage = () => {
   return (

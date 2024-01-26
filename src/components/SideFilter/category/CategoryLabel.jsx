@@ -3,7 +3,7 @@ import { categoryLabelInputs } from "../../../inputsData/CategoryLabelInputs";
 const CategoryLabel = () => {
   return (
     <div className="flex flex-col gap-1">
-      {categoryLabelInputs.map(({ id, labelFor, text, name, value }) => {
+      {categoryLabelInputs.map(({ id, labelFor, text, name }) => {
         return (
           <label
             className="checkbox-label cursor-pointer relative flex gap-2"

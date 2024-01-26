@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import { IoMdArrowForward } from "react-icons/io";
 import { FiTrash2 } from "react-icons/fi";
 // import components
-import CartItem from "./CartItem";
+import CartItem from "../_common/CartItem";
 // import sidebar context
-import { SidebarContext } from "../contexts/SidebarContext";
+import { SidebarContext } from "../../contexts/SidebarContext";
 // import cart context
-import { CartContext } from "../contexts/CartContext";
+import { CartContext } from "../../contexts/CartContext";
 
 const Sidebar = () => {
   // sidebar context

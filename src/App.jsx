@@ -1,11 +1,11 @@
 // import react-router
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { myRoutes } from "./Routes/MyRoutes";
 
 // import components
-import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { myRoutes } from "./MyRoutes";
+import Sidebar from "./components/layout/Sidebar";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 import ProductDetails from "./pages/ProductDetails";
 
 const App = () => {
