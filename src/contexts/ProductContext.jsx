@@ -1,8 +1,5 @@
 import { createContext, useState, useEffect } from "react";
 
-const filURL=`https://happy-clo-db.vercel.app/products?category=${categoryItem}&subcategory=${subcatItem}`
-
-
 const url = "https://happy-clo-db.vercel.app/products";
 const hUrl = "https://happy-clo-db.vercel.app/products?_limit=4";
 // create context
@@ -12,7 +9,7 @@ const ProductProvider = ({ children }) => {
   // product state
   const [products, setProducts] = useState([]);
   // flag for page
-  const [pageI, setPageI] = useState(true);
+  const [pageI, setPageI] = useState(false);
 
   // fetch products
   useEffect(() => {
