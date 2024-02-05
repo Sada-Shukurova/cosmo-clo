@@ -35,14 +35,12 @@ const ProductProvider = ({ children }) => {
   useEffect(() => {
     const splitedState = query.split("=");
 
-
     if (queryUrl.includes(splitedState[0])) {
       const regex = new RegExp(`${splitedState[0]}=[^&]*`);
       queryUrl = queryUrl.replace(
         regex,
         `${splitedState[0]}=${splitedState[1]}`
-      ); // output must be http://excample.com?category=lorem
-    } else {
+      );
       queryUrl += `${query}&`;
     }
 
