@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { subcategoryLabelInputs } from "../../../inputsData/SubcategoryLabelInputs";
+import { ProductContext } from "../../../contexts/ProductContext";
 
 const SubcategoryLabel = () => {
+  const { setQuery } = useContext(ProductContext);
+
   return (
     <div className="flex flex-col gap-1">
       {subcategoryLabelInputs.map(({ id, name, labelFor, text }) => {
@@ -15,6 +19,10 @@ const SubcategoryLabel = () => {
               type="radio"
               name={name}
               id={labelFor}
+              value={labelFor}
+              onChange={(e) => {
+                setQuery(`subcategory=${e.target.value}`);
+              }}
             />
             <span className=" checkmark mr-3 absolute top-0 -left-[10px] h-[20px] w-[20px] bg-[#eee] rounded-full"></span>
             {text}

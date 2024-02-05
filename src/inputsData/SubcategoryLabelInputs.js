@@ -7,7 +7,7 @@ export const subcategoryLabelInputs = [
   },
   {
     id: 2,
-    labelFor: "tShirt",
+    labelFor: "tshirt",
     text: "T-shirt",
     name: "subcat",
   },
