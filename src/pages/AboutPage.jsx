@@ -1,10 +1,13 @@
+import PageTransition from "../components/animation/PageTransition";
+import AboutUs from "../components/AboutUs";
 import HeroSmall from "../components/layout/HeroSmall";
 
 const AboutPage = () => {
   return (
-    <div>
-      <HeroSmall heroTitle={"About"} />
-    </div>
+    <PageTransition>
+      <HeroSmall heroTitle={"About Us"} />
+      <AboutUs />
+    </PageTransition>
   );
 };
 

@@ -6,9 +6,7 @@ const recommendedBtnClasses =
 const Recommended = () => {
   return (
     <div>
-      <div className="container mx-auto px-10">
-        <h2 className="text-xl py-10">Recommended</h2>
-        {/* recommended-btns */}
+      <div className="container mx-auto p-10">
         <div className="flex justify-between items-center">
           <Button text="All Products" classes={recommendedBtnClasses} />
           <Button text="T-shirts" classes={recommendedBtnClasses} />

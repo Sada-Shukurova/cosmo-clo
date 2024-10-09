@@ -1,10 +1,13 @@
+import PageTransition from "../components/animation/PageTransition";
+import ContactUs from "../components/ContactUs";
 import HeroSmall from "../components/layout/HeroSmall";
 
 const ContactPage = () => {
   return (
-    <div>
+    <PageTransition>
       <HeroSmall heroTitle={"Contact Us"} />
-    </div>
+      <ContactUs />
+    </PageTransition>
   );
 };
 
