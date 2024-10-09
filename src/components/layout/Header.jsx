@@ -54,7 +54,7 @@ const Header = () => {
         <Link to={"/"}>
           <div className="flex items-center">
             <img className="w-[40px]" src={Logo} alt="logo" />
-            <h2 className="text-2xl font-semibold">HappyClo</h2>
+            <h2 className="text-2xl font-semibold">CosmoClo</h2>
           </div>
         </Link>
         {/* Navigation */}
