@@ -13,7 +13,7 @@ const Hero = () => {
           <div className="font-semibold flex items-center uppercase">
             <div className="w-10 h-[2px] bg-red-500 mr-3"></div>New Trend
           </div>
-          <h1 className="text-[70px] leading-[1.1] font-light mb-4">
+          <h1 className="text-[50px] md:text-[70px] leading-[1.1] font-light mb-4">
             SPRING SALE <br />
             <span className="font-semibold">STYLISH WOMEN</span>
           </h1>

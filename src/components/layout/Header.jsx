@@ -68,7 +68,7 @@ const Header = () => {
                   isActive
                     ? "text-red-700 border-b-2 border-b-red-700  font-semibold"
                     : ""
-                } text-xl`
+                } hidden md:block text-xl`
               }
             >
               {text}
@@ -77,9 +77,9 @@ const Header = () => {
         })}
 
         {/* user */}
-        <Link to={"https://www.google.com"}>
+        {/* <Link to={"https://www.google.com"}>
           <FiUser className="text-2xl" />
-        </Link>
+        </Link> */}
         {/* cart */}
         <div
           onClick={() => setIsOpen(!isOpen)}

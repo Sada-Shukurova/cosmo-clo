@@ -9,7 +9,7 @@ const HeroSmall = ({ heroTitle }) => {
           variants={textVariants}
           className="flex flex-col justify-center"
         >
-          <h1 className="text-[70px] leading-[1.1] font-light mb-4">
+          <h1 className="text-[50px] md:text-[70px] leading-[1.1] font-light mb-4">
             {heroTitle}
           </h1>
         </motion.div>

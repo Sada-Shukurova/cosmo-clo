@@ -109,7 +109,7 @@ const ContactUs = () => {
                     Address
                   </h3>
                   <p className="text-gray-700">
-                    777 Random Street,
+                    Binaghady dist,
                     <br />
                     Baku, AZ 1000,
                     <br />
@@ -126,7 +126,7 @@ const ContactUs = () => {
                   <h3 className="text-xl font-semibold text-black mb-2">
                     Email
                   </h3>
-                  <p className="text-gray-700">support@cosmo-clo.com</p>
+                  <p className="text-gray-700">info@cosmo-clo.com</p>
                 </div>
                 <div className="flex justify-center space-x-4 mt-4">
                   <a
