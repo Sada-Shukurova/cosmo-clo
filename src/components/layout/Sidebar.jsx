@@ -4,17 +4,22 @@ import { Link } from "react-router-dom";
 // import icons
 import { IoMdArrowForward } from "react-icons/io";
 import { FiTrash2 } from "react-icons/fi";
-// import components
 import CartItem from "../_common/CartItem";
-// import sidebar context
 import { SidebarContext } from "../../contexts/SidebarContext";
-// import cart context
 import { CartContext } from "../../contexts/CartContext";
+import { useUser } from "@clerk/clerk-react";
 
 const Sidebar = () => {
-  // sidebar context
+  const { isSignedIn, user } = useUser();
+  function checkoutFunc() {
+    if (isSignedIn) {
+      alert("Succesfull");
+    } else {
+      alert("You have to sign in first!");
+    }
+  }
   const { isOpen, handleClose } = useContext(SidebarContext);
-  // cart context
+
   const { cart, clearCart, total, itemAmount } = useContext(CartContext);
   return (
     <div
@@ -46,7 +51,6 @@ const Sidebar = () => {
           <div className="uppercase font-semibold">
             <span className="mr-2">Total:</span> ${parseFloat(total).toFixed(2)}
           </div>
-          {/* clear cart icon*/}
           <div
             onClick={clearCart}
             className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl"
@@ -60,12 +64,13 @@ const Sidebar = () => {
         >
           View cart
         </Link>
-        <Link
-          to={"/"}
-          className="bg-primary text-white flex p-4 justify-center items-center  w-full font-medium"
+
+        <div
+          onClick={checkoutFunc}
+          className="cursor-pointer  bg-primary text-white flex p-4 justify-center items-center  w-full font-medium"
         >
           Checkout
-        </Link>
+        </div>
       </div>
     </div>
   );

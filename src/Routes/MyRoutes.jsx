@@ -17,20 +17,14 @@ export const myRoutes = [
     element: <ProductsPage />,
     text: "PRODUCTS",
   },
-  // {
-  //   id: 3,
-  //   path: "/product/:id",
-  //   element: <ProductDetails />,
-  //   text: "",
-  // },
   {
-    id: 4,
+    id: 3,
     path: "/about",
     element: <AboutPage />,
     text: "ABOUT",
   },
   {
-    id: 5,
+    id: 4,
     path: "/contact",
     element: <ContactPage />,
     text: "CONTACT",

@@ -1,16 +1,14 @@
 import { useContext } from "react";
-// import link
 import { Link } from "react-router-dom";
-// import icons
 import { BsPlus, BsEyeFill } from "react-icons/bs";
-// import cart context
 import { CartContext } from "../../contexts/CartContext";
 
 const Product = ({ product }) => {
-  // cart context
   const { addToCart } = useContext(CartContext);
-  // destructure product
   const { id, image, category, title, price } = product;
+  function addToCartFunc() {
+    addToCart(product, id);
+  }
   return (
     <div>
       <div className="border rounded-md border-[#e4e4e4] h-[300px] mb-4 relative overflow-hidden group transition">
